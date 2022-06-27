@@ -44,16 +44,7 @@ def main():
             break # game over
 
         ### Checks if game is a draw ###
-        if \
-            (grid.position['1'] != '1') \
-        and (grid.position['2'] != '2') \
-        and (grid.position['3'] != '3') \
-        and (grid.position['4'] != '4') \
-        and (grid.position['5'] != '5') \
-        and (grid.position['6'] != '6') \
-        and (grid.position['7'] != '7') \
-        and (grid.position['8'] != '8') \
-        and (grid.position['9'] != '9'):
+        if grid.all_positions_have_changed(grid.position, grid.original_positions):
             print("\nIt's a draw!")
             break # game over
 
